@@ -11,6 +11,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.util.Duration;
+import org.example.controllers.LoginController;
 import org.example.utils.Utilities;
 import org.example.utils.ViewNavigator;
 
@@ -22,11 +23,13 @@ public class LoginView {
     private TextField userNameField = new TextField();
     private PasswordField userPasswordField = new PasswordField();
     private Button loginButton = new Button("Login");
-    private Label signupLabel = new Label("Register");
+    private Label registerLabel = new Label("Register");
 
     public void show() {
         Scene scene = createScene();
         scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("/LoginView.css")).toExternalForm());
+
+        new LoginController(this);
         ViewNavigator.switchView(scene);
     }
 
@@ -44,14 +47,14 @@ public class LoginView {
     }
     private VBox createLoginFormBox() {
         VBox loginFormBox = new VBox(5);
-        loginFormBox.getChildren().addAll(userNameField, userPasswordField, loginButton, signupLabel);
+        loginFormBox.getChildren().addAll(userNameField, userPasswordField, loginButton, registerLabel);
 
         // CSS class name
         projectNameLabel.getStyleClass().addAll("header");
         userNameField.getStyleClass().addAll("field", "user-name", "border");
         userPasswordField.getStyleClass().addAll("field", "user-password", "border");
         loginButton.getStyleClass().addAll("login-button", "border");
-        signupLabel.getStyleClass().addAll("register-link");
+        registerLabel.getStyleClass().addAll("register-link");
 
         // setup
         userNameField.setPromptText("Username");
@@ -59,7 +62,7 @@ public class LoginView {
 
         VBox.setMargin(loginButton, new Insets(20, 0, 0, 0));
         loginButton.setMinWidth(200);
-        VBox.setMargin(signupLabel, new Insets(10, 0, 0, 0));
+        VBox.setMargin(registerLabel, new Insets(10, 0, 0, 0));
         VBox.setMargin(userNameField, new Insets(20, 0, 0, 0));
 
         // WH
@@ -83,5 +86,46 @@ public class LoginView {
 
         loginFormBox.setAlignment(Pos.CENTER);
         return loginFormBox;
+    }
+
+    // getter & setter
+    public Label getProjectNameLabel() {
+        return projectNameLabel;
+    }
+
+    public void setProjectNameLabel(Label projectNameLabel) {
+        this.projectNameLabel = projectNameLabel;
+    }
+
+    public TextField getUserNameField() {
+        return userNameField;
+    }
+
+    public void setUserNameField(TextField userNameField) {
+        this.userNameField = userNameField;
+    }
+
+    public PasswordField getUserPasswordField() {
+        return userPasswordField;
+    }
+
+    public void setUserPasswordField(PasswordField userPasswordField) {
+        this.userPasswordField = userPasswordField;
+    }
+
+    public Button getLoginButton() {
+        return loginButton;
+    }
+
+    public void setLoginButton(Button loginButton) {
+        this.loginButton = loginButton;
+    }
+
+    public Label getRegisterLabel() {
+        return registerLabel;
+    }
+
+    public void setRegisterLabel(Label signupLabel) {
+        this.registerLabel = signupLabel;
     }
 }
