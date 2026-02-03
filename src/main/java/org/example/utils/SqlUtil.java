@@ -38,7 +38,7 @@ public class SqlUtil {
         HttpURLConnection conn = null;
         try {
             conn = ApiUtil.fetchApi(
-                    "/api/v1/user/register",
+                    "/auth/register",
                     ApiUtil.RequestMethod.POST,
                     userData
             );
