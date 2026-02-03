@@ -1,5 +1,6 @@
 package org.example.controllers;
 
+import com.google.gson.JsonObject;
 import javafx.event.EventHandler;
 import javafx.scene.control.Alert;
 import javafx.scene.input.MouseEvent;
@@ -8,7 +9,10 @@ import org.example.utils.Utilities;
 import org.example.views.LoginView;
 import org.example.views.RegisterView;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 
 public class LoginController {
@@ -30,13 +34,30 @@ public class LoginController {
                 String email = loginView.getUserNameField().getText();
                 String password = loginView.getUserPasswordField().getText();
 
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("email", email);
+                jsonObject.addProperty("password", password);
+
                 HttpURLConnection conn = null;
                 try {
                     conn = ApiUtil.fetchApi(
-                            "/api/v1/user/login?email=" + email + "&password=" + password,
+                            "/auth/login",
                             ApiUtil.RequestMethod.POST, // method
-                            null // json
+                            jsonObject // json
                     );
+
+                    InputStream is = conn.getInputStream();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                    StringBuilder sb = new StringBuilder();
+
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        sb.append(line);
+                    }
+
+                    String responseJson = sb.toString();
+                    System.out.println(responseJson);
+
 
                     assert conn != null;
                     if (conn.getResponseCode() != 200) {
