@@ -1,0 +1,16 @@
+.field {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0px;
+    -fx-background-radius: 0px;
+
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8px;
+}
+
+.button {
+    -fx-background-color: #388bff;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+}

@@ -3,5 +3,10 @@ module springboot.client {
     requires java.desktop;
     requires javafx.controls;
     requires com.google.gson;
+    requires javafx.fxml;
     exports org.example;
+
+    opens org.example to javafx.fxml;
+    opens org.example.controllers to javafx.fxml;
+    opens org.example.utils to javafx.fxml;
 }
