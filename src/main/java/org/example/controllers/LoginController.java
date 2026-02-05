@@ -8,6 +8,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
 import org.example.utils.ApiUtil;
 import org.example.utils.Utilities;
+import org.example.utils.ViewNavigator;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,7 +40,6 @@ public class LoginController implements Initializable {
                 loginButton.setStyle("-fx-background-color: #388bff");
             }
         });
-
 
         loginButton.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
@@ -95,6 +95,13 @@ public class LoginController implements Initializable {
             @Override
             public void handle(MouseEvent mouseEvent) {
                 registerLabel.setStyle("-fx-text-fill: black");
+            }
+        });
+
+        registerLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                ViewNavigator.switchView("/views/RegisterView.fxml");
             }
         });
 
