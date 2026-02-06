@@ -14,7 +14,6 @@ import org.example.utils.ApiUtil;
 import org.example.utils.Utilities;
 import org.example.utils.ViewNavigator;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -88,7 +87,7 @@ public class LoginController implements Initializable {
                     SessionManager.setToken(data.get("token").getAsString());
                     SessionManager.setRole(data.get("role").getAsString());
 
-                    ViewNavigator.switchView("/views/ProfileView.fxml", true);
+                    ViewNavigator.switchView("/views/UsersViewing/UsersView.fxml", true);
 
 //                    System.out.println(SessionManager.getToken() + " || " + SessionManager.getRole());
 

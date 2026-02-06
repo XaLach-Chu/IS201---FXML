@@ -54,6 +54,9 @@
                      </font>
                   </PasswordField>
                </children>
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
             </VBox>
             <Button fx:id="loginButton" mnemonicParsing="false" prefHeight="0.0" prefWidth="185.0" text="Login">
                <font>
