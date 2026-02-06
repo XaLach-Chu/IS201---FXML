@@ -2,11 +2,13 @@ package org.example.controllers;
 
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import javafx.beans.binding.Bindings;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 import org.example.security.SessionManager;
 import org.example.utils.ApiUtil;
 import org.example.utils.Utilities;
@@ -27,6 +29,8 @@ public class LoginController implements Initializable {
     public PasswordField passwordField;
     public Button loginButton;
     public Label registerLabel;
+    public Label emailText;
+    public Label passwordText;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -119,6 +123,17 @@ public class LoginController implements Initializable {
                 ViewNavigator.switchView("/views/RegisterView.fxml", false);
             }
         });
+
+        emailText.textFillProperty().bind(
+                Bindings.when(emailField.textProperty().isEmpty())
+                        .then(Color.web("#000000"))
+                        .otherwise(Color.web("#388bff"))
+        );
+        passwordText.textFillProperty().bind(
+                Bindings.when(passwordField.textProperty().isEmpty())
+                        .then(Color.web("#000000"))
+                        .otherwise(Color.web("#388bff"))
+        );
 
     }
 

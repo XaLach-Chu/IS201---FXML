@@ -19,7 +19,7 @@
             </Label>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Username">
+                  <Label fx:id="usernameText" text="Username">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -39,7 +39,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="27.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Email">
+                  <Label fx:id="emailText" text="Email">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -56,7 +56,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="118.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Password">
+                  <Label fx:id="passwordText" text="Password">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -73,7 +73,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="149.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Re-enter Password">
+                  <Label fx:id="rePasswordText" text="Re-enter Password">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>
@@ -90,7 +90,7 @@
             </VBox>
             <VBox layoutX="10.0" layoutY="72.0" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label text="Phone number (Optional)">
+                  <Label fx:id="phoneNumberText" text="Phone number (Optional)">
                      <font>
                         <Font name="System Bold" size="16.0" />
                      </font>

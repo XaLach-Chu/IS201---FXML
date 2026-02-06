@@ -1,10 +1,13 @@
 package org.example.controllers;
 
 import com.google.gson.JsonObject;
+import javafx.beans.binding.Bindings;
+import javafx.beans.binding.BooleanBinding;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.paint.Color;
 import org.example.utils.SqlUtil;
 import org.example.utils.Utilities;
 import org.example.utils.ViewNavigator;
@@ -21,7 +24,13 @@ public class RegisterController implements Initializable {
     public PasswordField rePasswordField;
     public TextField phoneNumberField;
     public Button registerButton;
+
     public Label loginLabel;
+    public Label usernameText;
+    public Label emailText;
+    public Label passwordText;
+    public Label rePasswordText;
+    public Label phoneNumberText;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -95,6 +104,34 @@ public class RegisterController implements Initializable {
             }
         });
 
+        // FIELD
+        // CSS
+        usernameText.textFillProperty().bind(
+                Bindings.when(usernameField.textProperty().isEmpty())
+                        .then(Color.web("#000000"))
+                        .otherwise(Color.web("#388bff"))
+        );
+        emailText.textFillProperty().bind(
+                Bindings.when(emailField.textProperty().isEmpty())
+                        .then(Color.web("#000000"))
+                        .otherwise(Color.web("#388bff"))
+        );
+        passwordText.textFillProperty().bind(
+                Bindings.when(passwordField.textProperty().isEmpty())
+                        .then(Color.web("#000000"))
+                        .otherwise(Color.web("#388bff"))
+        );
+        rePasswordText.textFillProperty().bind(
+                Bindings.when(rePasswordField.textProperty().isEmpty().or(rePasswordField.textProperty().isNotEqualTo(passwordField.textProperty())))
+                        .then(Color.web("#000000"))
+                        .otherwise(Color.web("#388bff"))
+        );
+
+
+    }
+
+    private void changeLabelColor(Label label, String c) {
+        label.setTextFill(Color.web(c));
     }
 
     private boolean validateInput() {
