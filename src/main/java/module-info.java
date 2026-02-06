@@ -4,6 +4,8 @@ module springboot.client {
     requires javafx.controls;
     requires com.google.gson;
     requires javafx.fxml;
+    requires de.jensd.fx.glyphs.fontawesome;
+    requires java.sql;
     exports org.example;
 
     opens org.example to javafx.fxml;

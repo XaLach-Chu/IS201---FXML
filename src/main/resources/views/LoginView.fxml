@@ -6,90 +6,75 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.LoginController">
+<VBox id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="container" stylesheets="@../css/LoginView.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.controllers.LoginController">
    <children>
-      <ImageView fitHeight="677.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" StackPane.alignment="BOTTOM_CENTER">
-         <image>
-            <Image url="@../images/login-image.png" />
-         </image>
-      </ImageView>
-      <VBox id="container" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" styleClass="container" stylesheets="@../css/LoginView.css">
+      <VBox fx:id="loginForm" alignment="CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" scaleZ="2.0" stylesheets="@../css/LoginView.css">
          <children>
-            <VBox fx:id="loginForm" alignment="CENTER" maxWidth="-Infinity" prefHeight="200.0" prefWidth="600.0" scaleZ="2.0" stylesheets="@../css/LoginView.css">
+            <Label fx:id="projectNameLabel" styleClass="header" text="EDU PATH" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="37.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </Label>
+            <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label fx:id="projectNameLabel" styleClass="header" text="EDU PATH" textAlignment="CENTER">
+                  <Label alignment="CENTER_RIGHT" text="Email:">
                      <font>
-                        <Font name="System Bold" size="37.0" />
+                        <Font name="System Bold" size="17.0" />
                      </font>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
                   </Label>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label alignment="CENTER_RIGHT" text="Email:">
-                           <font>
-                              <Font name="System Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <TextField fx:id="emailField" prefHeight="43.0" prefWidth="400.0" styleClass="field">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </TextField>
-                     </children>
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                  </VBox>
-                  <VBox prefHeight="200.0" prefWidth="100.0">
-                     <children>
-                        <Label alignment="CENTER_RIGHT" text="Password:">
-                           <font>
-                              <Font name="System Bold" size="17.0" />
-                           </font>
-                        </Label>
-                        <PasswordField fx:id="passwordField" prefHeight="43.0" prefWidth="400.0" styleClass="field">
-                           <font>
-                              <Font size="16.0" />
-                           </font>
-                        </PasswordField>
-                     </children>
-                  </VBox>
-                  <Button fx:id="loginButton" mnemonicParsing="false" prefHeight="0.0" prefWidth="185.0" text="Login">
+                  <TextField fx:id="emailField" prefHeight="43.0" prefWidth="400.0" styleClass="field">
                      <font>
-                        <Font name="System Bold" size="16.0" />
+                        <Font size="16.0" />
                      </font>
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
-                  </Button>
-                  <Label fx:id="registerLabel" text="Don't have an account? Register!">
-                     <VBox.margin>
-                        <Insets top="20.0" />
-                     </VBox.margin>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" text="Password:">
                      <font>
-                        <Font size="15.0" />
+                        <Font name="System Bold" size="17.0" />
                      </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
                   </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="43.0" prefWidth="400.0" styleClass="field">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </PasswordField>
                </children>
             </VBox>
+            <Button fx:id="loginButton" mnemonicParsing="false" prefHeight="0.0" prefWidth="185.0" text="Login">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Label fx:id="registerLabel" text="Don't have an account? Register!">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
          </children>
-         <StackPane.margin>
-            <Insets bottom="60.0" />
-         </StackPane.margin>
       </VBox>
    </children>
-</StackPane>
+</VBox>

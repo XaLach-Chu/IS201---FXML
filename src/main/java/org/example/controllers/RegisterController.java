@@ -63,7 +63,7 @@ public class RegisterController implements Initializable {
                 boolean status = SqlUtil.postCreateUser(jsonObject);
                 if (status) {
                     Utilities.showAlertDialog(Alert.AlertType.CONFIRMATION, "Account Created!");
-                    ViewNavigator.switchView("/views/LoginView.fxml");
+                    ViewNavigator.switchView("/views/LoginView.fxml", false);
                 } else {
                     Utilities.showAlertDialog(Alert.AlertType.ERROR, "Something went wrong :(");
                 }
@@ -91,7 +91,7 @@ public class RegisterController implements Initializable {
         loginLabel.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                ViewNavigator.switchView("/views/LoginView.fxml");
+                ViewNavigator.switchView("/views/LoginView.fxml", false);
             }
         });
 
