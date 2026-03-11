@@ -12,6 +12,9 @@ public class Main extends Application {
         ViewNavigator.setMainStage(stage);
         ViewNavigator.switchView("/views/LoginView.fxml", false);
         stage.setTitle("DCMM UIT");
+
+        //okok
+
 //        stage.setMaximized(true);
         stage.show();
 

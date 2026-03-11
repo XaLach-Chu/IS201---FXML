@@ -11,9 +11,6 @@ module springboot.client {
     exports org.example;
 
     opens org.example to javafx.fxml;
-    opens org.example.controllers to javafx.fxml;
     opens org.example.utils to javafx.fxml;
-    opens org.example.controllers.usersView to javafx.fxml;
 
-    opens org.example.dto.requests to com.fasterxml.jackson.databind;
 }
