@@ -5,13 +5,14 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
@@ -24,27 +25,36 @@
             <Label alignment="CENTER" prefHeight="65.0" prefWidth="177.0" style="-fx-font-weight: Bold;" text="EduPath" textFill="#a25bff">
                <font>
                   <Font size="40.0" />
-               </font></Label>
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="223.0" text="Trang chủ">
                <font>
                   <Font size="26.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="202.0" text="Khóa học">
                <font>
                   <Font size="26.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="206.0" text="Lộ trình">
                <font>
                   <Font size="26.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" text="Hồ sơ">
                <font>
                   <Font size="26.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="246.0" text="Cài đặt">
                <font>
                   <Font size="26.0" />
-               </font></Button>
+               </font>
+            </Button>
             <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
             <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="248.0" text="Hỗ trợ" />
             <Region prefHeight="70.0" prefWidth="177.0" />
@@ -59,15 +69,12 @@
                   <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="55.0" prefWidth="106.0" text="Home">
-                     <font>
-                        <Font size="26.0" />
-                     </font></Button>
                   <Region prefHeight="44.0" prefWidth="108.0" />
-                  <TextField prefHeight="35.0" prefWidth="326.0" promptText="🔍 Tìm kiếm ..." style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dbdffa; -fx-background-color: #f6f7fe;">
+                  <TextField prefHeight="42.0" prefWidth="530.0" promptText="🔍 Tìm kiếm ..." style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dbdffa; -fx-background-color: #f6f7fe;">
                      <font>
                         <Font size="18.0" />
-                     </font></TextField>
+                     </font>
+                  </TextField>
                   <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                   <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20; -fx-background-color: #F3F4F6;" text="🔔" textFill="#3360f6" />
                   <HBox alignment="CENTER" prefHeight="44.0" prefWidth="133.0">
@@ -78,11 +85,13 @@
                               <Label text="XaLach">
                                  <font>
                                     <Font size="16.0" />
-                                 </font></Label>
+                                 </font>
+                              </Label>
                               <Label text="Welcome">
                                  <font>
                                     <Font size="13.0" />
-                                 </font></Label>
+                                 </font>
+                              </Label>
                            </children>
                         </VBox>
                         <Label text="▼" />
@@ -111,7 +120,8 @@
                                           <Button mnemonicParsing="false" style="-fx-background-radius: 10; -fx-background-color: white;" text="Tìm hiểu ngay">
                                              <font>
                                                 <Font size="15.0" />
-                                             </font></Button>
+                                             </font>
+                                          </Button>
                                        </children>
                                     </VBox>
                                  </children>
@@ -192,7 +202,11 @@
                               <Separator opacity="0.3" prefWidth="200.0" />
                               <HBox>
                                  <children>
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                                    <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../../../../../OneDrive/Pictures/IDP.jpg" />
+                                       </image>
+                                    </ImageView>
                                     <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Label text="Thông tin khóa học">
@@ -224,7 +238,11 @@
                               <Separator opacity="0.3" prefWidth="200.0" />
                               <HBox>
                                  <children>
-                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="150.0" stroke="BLACK" strokeType="INSIDE" width="150.0" />
+                                    <ImageView fitHeight="150.0" fitWidth="150.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@../../../../../../OneDrive/Pictures/Screenshots/Ảnh%20chụp%20màn%20hình%20(24).png" />
+                                       </image>
+                                    </ImageView>
                                     <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
                                        <children>
                                           <Label text="Thông tin khóa học">
@@ -241,13 +259,6 @@
                                     </VBox>
                                  </children>
                               </HBox>
-                              <HBox layoutX="25.0" layoutY="71.0" />
-                              <HBox layoutX="25.0" layoutY="71.0">
-                                 <children>
-                                    <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
-                                 </children>
-                              </HBox>
-                              <HBox layoutX="25.0" layoutY="231.0" />
                            </children>
                            <padding>
                               <Insets bottom="15.0" left="15.0" top="10.0" />
@@ -262,7 +273,8 @@
                      </opaqueInsets>
                      <padding>
                         <Insets top="20.0" />
-                     </padding></VBox>
+                     </padding>
+                  </VBox>
                </children>
             </HBox>
          </children>

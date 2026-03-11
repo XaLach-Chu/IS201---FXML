@@ -10,7 +10,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
 
         ViewNavigator.setMainStage(stage);
-        ViewNavigator.switchView("/views/LoginView.fxml", false);
+        ViewNavigator.switchView("/views/LearnerCourseView.fxml", false);
         stage.setTitle("DCMM UIT");
 
         //okok
