@@ -16,10 +16,8 @@
 <?import javafx.scene.media.MediaView?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.layout.StackPane?>
 
-<BorderPane fx:controller="org.example.controller.LearnerLearningController"
-            maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@Sidebar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@Sidebar.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" >
     <left>
         <VBox prefHeight="1080.0" prefWidth="220.0" spacing="10.0" style="-fx-background-color: #F5F6FA; -fx-border-width: 1; -fx-border-color: #e0e0e0;" BorderPane.alignment="CENTER">
             <padding>
@@ -159,10 +157,7 @@
                            <content>
                               <VBox spacing="20.0">
                                  <children>
-                                     <StackPane fx:id="videoPane"
-                                                prefWidth="1280"
-                                                prefHeight="720"
-                                                style="-fx-background-color: black;" />
+                                    <MediaView fitHeight="720.0" fitWidth="1280.0" />
                                     <TextArea text="Thông tin của khóa học pla pla" />
                                  </children>
                               </VBox>
