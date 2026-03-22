@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <left>
+      <VBox prefHeight="1080.0" prefWidth="220.0" spacing="10.0" style="-fx-background-color: #F5F6FA; -fx-border-width: 1; -fx-border-color: #e0e0e0;" BorderPane.alignment="CENTER">
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" prefHeight="65.0" prefWidth="177.0" style="-fx-font-weight: Bold;" text="EduPath" textFill="#a25bff">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="30.0" />
+               </VBox.margin>
+            </Label>
+            <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="sidebar-btn" stylesheets="@Sidebar.css" text="Trang chủ">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/HomeButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" stylesheets="@Sidebar.css" text="Khóa học">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/CourseButtonActive.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="sidebar-btn" />
+                  <String fx:value="active" />
+               </styleClass>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="sidebar-btn" stylesheets="@Sidebar.css" text="Lộ trình">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/PathButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="sidebar-btn" stylesheets="@Sidebar.css" text="Hồ sơ">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/ProfileButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="sidebar-btn" stylesheets="@Sidebar.css" text="Cài đặt">
+               <font>
+                  <Font size="26.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/SettingButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Region prefHeight="200.0" prefWidth="200.0" stylesheets="@Sidebar.css" VBox.vgrow="ALWAYS" />
+            <Button graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="sidebar-btn" stylesheets="@Sidebar.css" text="Hỗ trợ">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/SupportButton.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Region prefHeight="70.0" prefWidth="177.0" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="60.0" prefWidth="200.0" spacing="30.0" style="-fx-background-color: white;">
+               <padding>
+                  <Insets bottom="10.0" left="20.0" right="30.0" top="10.0" />
+               </padding>
+               <children>
+                  <Region prefHeight="44.0" prefWidth="108.0" />
+                  <TextField prefHeight="42.0" prefWidth="530.0" promptText="🔍 Tìm kiếm ..." style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dbdffa; -fx-background-color: #f6f7fe;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" style="-fx-background-radius: 20; -fx-background-color: #F3F4F6;" text="🔔" textFill="#3360f6" />
+                  <HBox alignment="CENTER" prefHeight="44.0" prefWidth="133.0">
+                     <children>
+                        <Circle fill="DODGERBLUE" radius="22.0" stroke="BLACK" strokeType="INSIDE" />
+                        <VBox alignment="CENTER" prefHeight="44.0" prefWidth="79.0">
+                           <children>
+                              <Label text="XaLach">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Welcome">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Label text="▼" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" style="-fx-background-color: #F8FAFF;" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <children>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #3649F8; -fx-background-radius: 15;">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox alignment="CENTER" prefHeight="150.0" prefWidth="263.0" spacing="20.0">
+                                       <children>
+                                          <Label text="Thông tin quảng cáo" textFill="WHITE">
+                                             <font>
+                                                <Font size="20.0" />
+                                             </font>
+                                          </Label>
+                                          <Button mnemonicParsing="false" style="-fx-background-radius: 10; -fx-background-color: white;" text="Tìm hiểu ngay">
+                                             <font>
+                                                <Font size="15.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </StackPane>
+                        <HBox spacing="15.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <Button mnemonicParsing="false" style="-fx-background-color: #3649F8; -fx-background-radius: 6;" text="Tất cả" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 6;" text="Định hướng ngành học">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="93.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 6;" text="Lộ trình du học">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="297.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 6;" text="Tìm học bổng">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="445.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-background-radius: 6;" text="Kỹ năng viết luận">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <Label text="Gợi ý">
+                           <font>
+                              <Font name="System Bold" size="26.0" />
+                           </font>
+                        </Label>
+                        <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
+                           <content>
+                              <FlowPane prefHeight="702.0" prefWidth="1645.0">
+                                 <children>
+                                    <VBox style="-fx-background-color: white; -fx-background-radius: 10;">
+                                       <children>
+                                          <ImageView fitHeight="195.0" fitWidth="395.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../../../../../OneDrive/Pictures/IDP.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label text="Tên Khóa học">
+                                             <font>
+                                                <Font name="System Bold" size="20.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets bottom="10.0" left="15.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+                                             <children>
+                                                <Label text="Mentor: A">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" left="15.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Label text="Loại khóa học: Viết luận">
+                                                   <font>
+                                                      <Font size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets bottom="10.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <Separator opacity="0.5" prefWidth="200.0">
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" left="10.0" right="15.0" />
+                                             </VBox.margin>
+                                          </Separator>
+                                          <HBox>
+                                             <children>
+                                                <Label text="1000$">
+                                                   <font>
+                                                      <Font name="System Bold" size="20.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="15.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <Region prefHeight="0.0" prefWidth="202.0" HBox.hgrow="ALWAYS" />
+                                                <Button mnemonicParsing="false" style="-fx-background-color: #3649F8; -fx-background-radius: 6;" text="Đăng ký" textFill="WHITE">
+                                                   <HBox.margin>
+                                                      <Insets right="40.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" />
+                                             </VBox.margin>
+                                          </HBox>
+                                       </children>
+                                       <FlowPane.margin>
+                                          <Insets bottom="15.0" right="15.0" />
+                                       </FlowPane.margin>
+                                    </VBox>
+                                 </children>
+                              </FlowPane>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
